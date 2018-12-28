@@ -11,7 +11,7 @@ def __init__():
     username=0;
     user_password=0;
     databasename=0;
-
+ 
     if backup_type is "M" :
         print("Multiple")
     else:

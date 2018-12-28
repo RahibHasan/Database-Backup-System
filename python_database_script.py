@@ -1,8 +1,6 @@
 import  pymysql
 import os
 
-
-
 def __init__():
     print("## THIS SINGLE OR MULTIPLE DATABASE BACKUP SYSTEM POGRAM ##")
     backup_type=input("Which Type Backup Type Are You Interested , type Multiple is M & Single is S")
@@ -42,11 +40,3 @@ def __init__():
 
 __init__()
 
-
-#
-# db=pymysql.connect("localhost","root","root","hem");
-# cursor=db.cursor();
-# cursor.execute("select count(*) from fixtures")
-# data=cursor.fetchone()
-# print ("Database version : %s " % data)
-# db.close()

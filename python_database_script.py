@@ -13,7 +13,22 @@ def __init__():
     databasename=0;
  
     if backup_type is "M" :
-        print("Multiple")
+        hostname = input("Enter Your Hostname  ")
+        username = input("Enter Your Username  ")
+        password = input("Enter Your User Password ")
+        upload_file_location=input('Upload Your File Location')
+        file_name=open(upload_file_location,'r')
+
+
+        for single_database in file_name :
+
+            single_database=single_database[:-1]
+            create_cmd = "mysqldump -h " + hostname + " -u " + username + " -p" + password + " " + single_database + " > " + set_backup_location + "/" + single_database + ".sql"
+            # print(create_cmd)
+            os.system(create_cmd)
+            # / media / hasan / Error / Database_backup_python_script/database_name.txt
+
+
     else:
         print("Single")
         hostname=input("Enter Your Hostname  ")
